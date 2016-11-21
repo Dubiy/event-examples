@@ -1,0 +1,23 @@
+{
+  "name": "dom",
+  "version": "0.0.1",
+  "authors": [
+    "Igor Dubiy <netzver@gmail.com>"
+  ],
+  "description": "dom tests",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "3.3.6",
+    "font-awesome": "4.5.0"
+  }
+}
