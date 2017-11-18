@@ -1,3 +1,5 @@
+//https://docs.google.com/document/d/1KyAD7VkcCSrn9ctexMkOL3wxqHKn_5NrW07jq2LTQeA/edit
+
 function sayHello() {
     alert('hello');
     console.log('event triggered');
@@ -10,6 +12,11 @@ function removeHandler() {
 
 document.getElementById('clickMe').onclick = function () {
     sayHello();
+    this.onclick = null;
+    // e.target.onclick = null;
+
+    // console.log('event', e.target)
+
 };
 
 /////////////////////////////
@@ -20,6 +27,9 @@ var handler1 = function () {
     handler2 = function (event) {
     console.log('listener 2', 'this = ', this, 'event = ', event, 'arguments = ', arguments);
 };
+
+
+
 
 function addEvListenter() {
     document.getElementById('testButton').addEventListener('click', handler1);
@@ -33,6 +43,7 @@ function removeEvListenter() {
 }
 
 ///////////////////////////////// bad flow
+
 
 function addEvListenter2() {
     document.getElementById('testButton2').addEventListener('click', function () {
@@ -50,9 +61,9 @@ function removeEvListenter2() {
 
 document.getElementById('eventObjectButton').onclick = function eventObject(ev) {
     console.log(ev);
-    console.log('type', ev.type);
-    console.log('target', ev.target);
-    console.log('currentTarget', ev.currentTarget);
+    // console.log('type', ev.type);
+    // console.log('target', ev.target);
+    // console.log('currentTarget', ev.currentTarget);
     console.log('clientX clientY (window)', ev.clientX + ' ' + ev.clientY); //try to press enter
 
 };
@@ -68,6 +79,7 @@ document.getElementById('propagationTest').onclick = propHandler;
 
 var propHandler2 = function (event) {
     // event.stopPropagation();
+    console.log(event);
     console.log('Target: ' + event.target.tagName + '. Current: ' + event.currentTarget.tagName);
 };
 
@@ -81,6 +93,7 @@ document.querySelector('#propagationTest2 button').onclick = propHandler2;
 ////////////////////////////////////////////// Bubbling
 
 var bubblingHandler = function (event) {
+    console.log('Target: ' + event.target.tagName + '. Current: ' + event.currentTarget.tagName + ' eventPhase ' + event.eventPhase );
     alert('Target: ' + event.target.tagName + '. Current: ' + event.currentTarget.tagName + ' eventPhase ' + event.eventPhase );
     // console.log('Target: ' + event.target.tagName + '. Current: ' + event.currentTarget.tagName, event);
 };

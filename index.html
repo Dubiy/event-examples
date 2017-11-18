@@ -7,111 +7,27 @@
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <h1>Events</h1>
-            <h3>Simple examples</h3>
-            <div>
-                <button class="btn btn-success" onclick="alert('hello'); alert('bye');">onclick attr code</button>
-                <button class="btn btn-success" onclick="sayHello()">onclick attr function</button>
-                <button class="btn btn-success" id="clickMe">onclick object</button>
-                <button class="btn btn-warning" onclick="removeHandler()">remove onClick</button>
-            </div>
-
-            <h3>addEventListener i removeEventListener</h3>
-            <div>
-                <button class="btn btn-default" id="testButton">Button</button>
-                <button class="btn btn-success" onclick="addEvListenter()">Add event</button>
-                <button class="btn btn-warning" onclick="removeEvListenter()">Remove event</button>
-            </div>
-
-            <h3>addEventListener i removeEventListener (problem)</h3>
-            <div>
-                <button class="btn btn-default" id="testButton2">Button2</button>
-                <button class="btn btn-success" onclick="addEvListenter2()">Add event2</button>
-                <button class="btn btn-warning" onclick="removeEvListenter2()">Remove event2</button>
-            </div>
-
-            <h3>Event object</h3>
-            <div>
-                <button class="btn btn-info" id="eventObjectButton">Event object</button>
-            </div>
-
-            <h3>Event propagation</h3>
-
-            <div id="propagationTest">
-                div
-                <p>
-                    p
-                    <span>
-                        span
-                        <button class="btn btn-success">Event propagation</button>
-                    </span>
-                </p>
-
-            </div>
-
-            <code>
-                <pre>
-                    <style id="visibleStyle" contenteditable="true">
-                        #visibleStyle {
-                            display: block;
-                        }
-
-                        #propagationTest, #propagationTest p, #propagationTest span,
-                        #propagationTest2, #propagationTest2 p, #propagationTest2 span {
-                            border: 1px solid gray;
-                            padding: 15px;
-                            margin: 15px;
-                        }
-                    </style>
-                </pre>
-            </code>
-
-            <h3>Event propagation2</h3>
-
-            <div id="propagationTest2">
-                div
-                <p>
-                    p
-                    <span>
-                        span
-                        <button class="btn btn-success">Event propagation</button>
-                    </span>
-                </p>
-            </div>
 
 
+        <ul id="todolist">
+            <li>Hel">lo<button>Edit</button>Do homework</li>
+            <li>Write some code <button>Edit</button></li>
+            <li>Watch some video <button>Edit</button></li>
+        </ul>
 
+        <input id="editField" value='Hel">lo'>
 
-
-            <h3>Event bubbling</h3>
-
-            <div id="bubblingTest">
-                div
-                <p>
-                    p
-                    <span>
-                        span
-                        <button class="btn btn-success">Event bubbling</button>
-                    </span>
-                </p>
-            </div>
-
-            <style>
-                 #bubblingTest, #bubblingTest p, #bubblingTest span {
-                    border: 1px solid gray;
-                    padding: 15px;
-                    margin: 15px;
-                }
-            </style>
-
-            <h3>old school</h3>
-            <a href="http://google.com" class="btn btn-info" target="_blank" onclick="return confirm('R u sure?')">Go</a>
-
-        </div>
     </div>
 
-    <img src="http://learn.javascript.ru/article/event-bubbling/eventflow.png">
+    <style>
+        ul li.done {
+            text-decoration: line-through;
+        }
+
+    </style>
+
+
+    <!--<img src="http://learn.javascript.ru/article/event-bubbling/eventflow.png">-->
 
 
 
@@ -122,6 +38,8 @@
 
 
 
-    <script src="dom.js"> </script>
+    <!--<script src="dom.js"> </script>-->
+    <!--<script src="todo.js"> </script>-->
+    <script src="example.js"></script>
 </body>
 </html>
